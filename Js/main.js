@@ -3,14 +3,14 @@ function tocaSom(seletorAudio){
     const elemento = document.querySelector(seletorAudio);
 
     if(elemento === null){
-        throw new Error ("Elemento não encontrado");
+        throw new Error ("Elemento não encontrado ou seletor invalido");
 
     }
-    if(elemento != null && elemento.localName === "audio"){ 
+    if(elemento && elemento.localName === "audio"){ 
 
         elemento.play();
     }else{
-        throw new Error ("Elemento não encontrado");
+        throw new Error ("Elemento não encontrado ou seletor invalido");
     }
 }
 
